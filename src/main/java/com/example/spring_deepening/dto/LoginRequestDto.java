@@ -1,2 +1,11 @@
-package com.example.spring_deepening.dto;public class LoginRequestDto {
+package com.example.spring_deepening.dto;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class LoginRequestDto {
+    private String username;
+    private String password;
 }

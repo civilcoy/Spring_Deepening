@@ -1,2 +1,12 @@
-package com.example.spring_deepening.repository;public interface CommentRepository {
+package com.example.spring_deepening.repository;
+
+import com.example.spring_deepening.entity.Comment;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface CommentRepository extends JpaRepository<Comment, Long> {
+    Optional<Comment> findByIdAndUserId(Long cmtId, Long UserId);
 }
